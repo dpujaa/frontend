@@ -12,9 +12,9 @@ const TaskForm = ({ selectedTask, onSave }) => {
 
     useEffect(() => {
         if (selectedTask) {
-            setFormData(selectedTask); // Load the selected task into the form
+            setFormData(selectedTask); // Populate form for editing
         } else {
-            clearForm(); // Clear the form if no task is selected
+            clearForm(); // Clear form for new task
         }
     }, [selectedTask]);
 
@@ -29,15 +29,8 @@ const TaskForm = ({ selectedTask, onSave }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            if (selectedTask) {
-                // Update an existing task
-                await updateTask(selectedTask._id, formData);
-            } else {
-                // Add a new task
-                const newTask = await createTask(formData);
-                onSave(newTask.data); // Notify parent component of the new task
-            }
-            clearForm(); // Clear the form after submission
+            await onSave(formData); // Call onSave callback with form data
+            clearForm();
         } catch (error) {
             console.error('Error saving task:', error);
         }
