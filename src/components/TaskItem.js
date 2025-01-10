@@ -8,8 +8,10 @@ const TaskItem = ({ task, onDelete, onEdit }) => {
             <p>Priority: {task.priority}</p>
             <p>Due Date: {task.dueDate ? new Date(task.dueDate).toLocaleDateString() : 'No due date'}</p>
             <p>Status: {task.completed ? 'Completed' : 'Pending'}</p>
-            <button onClick={() => onEdit(task)}>Edit</button>
-            <button onClick={() => onDelete(task._id)}>Delete</button>
+            <div className='task-buttons'>
+                <button onClick={() => onEdit(task)}>Edit</button>
+                <button onClick={() => onDelete(task._id)}>Delete</button>
+            </div>
         </div>
     );
 };

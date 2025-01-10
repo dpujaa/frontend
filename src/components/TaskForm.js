@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createTask, updateTask } from '../services/api';
+import '../App.css';
 
 const TaskForm = ({ selectedTask, onSave }) => {
     const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const TaskForm = ({ selectedTask, onSave }) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <h2>{selectedTask ? 'Edit Task' : 'Create Task'}</h2>
+            <h2 className='createtaskhead'>{selectedTask ? 'Edit Task' : 'Create Task'}</h2>
             <input
                 type="text"
                 name="title"
@@ -74,6 +75,7 @@ const TaskForm = ({ selectedTask, onSave }) => {
                 value={formData.dueDate}
                 onChange={handleChange}
             />
+            <div className='checkbox-container'>
             <label>
                 Completed:
                 <input
@@ -83,6 +85,7 @@ const TaskForm = ({ selectedTask, onSave }) => {
                     onChange={handleChange}
                 />
             </label>
+            </div>
             <button type="submit">{selectedTask ? 'Update Task' : 'Add Task'}</button>
             {selectedTask && (
                 <button type="button" onClick={clearForm}>

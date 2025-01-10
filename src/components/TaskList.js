@@ -1,10 +1,11 @@
 import React from 'react';
 import TaskItem from './TaskItem';
+import '../App.css';
 
 const TaskList = ({ tasks, onDelete, onEdit }) => {
     return (
         <div>
-            <h2>Task List</h2>
+            <h2 className='tasklisthead'> Task List</h2>
             {tasks.length > 0 ? (
                 tasks.map((task) => (
                     <TaskItem

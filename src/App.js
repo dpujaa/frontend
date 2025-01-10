@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
 import { getTasks, createTask, updateTask, deleteTask } from './services/api';
+import './App.css';
+
 
 const App = () => {
     const [tasks, setTasks] = useState([]); // State to store all tasks
@@ -62,8 +64,11 @@ const App = () => {
     };
 
     return (
-        <div>
-            <h1>Task Manager</h1>
+        <div className='FullPage'>
+          <header className="title">
+            <h1>task manager</h1>
+          </header>
+
             {/* Render TaskForm for adding or editing tasks */}
             <TaskForm
                 selectedTask={selectedTask}

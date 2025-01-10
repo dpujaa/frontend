@@ -1,13 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Instrument Serif', serif;
+  background-color: #f2fdff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
+
+/* Section Styling */
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 100%; /* Ensure consistent width */
+}
+
+/* Form Input and Button Styling */
+input,
+textarea,
+select,
+button {
+  font-family: 'Instrument Serif', serif; /* Ensure font consistency */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  width: auto; /* Adjust button width */
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Instrument Serif', serif; /* Consistent font */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Align Completed and Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkbox-container label {
+  margin-right: 5px;
+}
+
+/* Task List Header */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.task-buttons {
+  display: flex; /* Ensures buttons are aligned in a row */
+  gap: 10px; /* Adds space between the buttons */
+}
+
