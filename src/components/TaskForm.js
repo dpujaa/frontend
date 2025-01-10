@@ -86,12 +86,14 @@ const TaskForm = ({ selectedTask, onSave }) => {
                 />
             </label>
             </div>
-            <button type="submit">{selectedTask ? 'Update Task' : 'Add Task'}</button>
-            {selectedTask && (
-                <button type="button" onClick={clearForm}>
-                    Cancel
-                </button>
-            )}
+            <div className='taskform-buttons'>
+                <button type="submit">{selectedTask ? 'Update Task' : 'Add Task'}</button>
+                {selectedTask && (
+                    <button type="button" onClick={clearForm}>
+                        Cancel
+                    </button>
+                )}
+            </div>
         </form>
     );
 };

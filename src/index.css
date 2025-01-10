@@ -80,3 +80,10 @@ h2 {
   gap: 10px; /* Adds space between the buttons */
 }
 
+.taskform-buttons {
+  display: flex;
+  gap: 10px; /* Adds space between buttons */
+  margin-top: 10px; /* Optional: adds some space above the buttons */
+}
+
+
