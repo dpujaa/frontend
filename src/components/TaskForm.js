@@ -13,9 +13,9 @@ const TaskForm = ({ selectedTask, onSave }) => {
 
     useEffect(() => {
         if (selectedTask) {
-            setFormData(selectedTask); // Populate form for editing
+            setFormData(selectedTask); //fill the form to edit
         } else {
-            clearForm(); // Clear form for new task
+            clearForm(); //clear the form for a new task
         }
     }, [selectedTask]);
 
@@ -30,7 +30,7 @@ const TaskForm = ({ selectedTask, onSave }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await onSave(formData); // Call onSave callback with form data
+            await onSave(formData); //call onSave callback with form data
             clearForm();
         } catch (error) {
             console.error('Error saving task:', error);
