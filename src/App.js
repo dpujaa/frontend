@@ -80,6 +80,9 @@ const App = () => {
                 onDelete={handleDelete}
                 onEdit={handleEdit}
             />
+            <footer className='myname'>
+              <p>Copyright © 2025 Puja Devarasetty. All Rights Reserved.</p>
+            </footer>
         </div>
     );
 };
